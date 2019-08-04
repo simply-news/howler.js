@@ -150,6 +150,12 @@
       return self;
     },
 
+    changeSrc: function (newSrc) {
+      var self = this;
+      self.unload(true);
+      self._src = newSrc;
+      self.load();
+    }, 
     /**
      * Unload and destroy all currently loaded Howl objects.
      * @return {Howler}
