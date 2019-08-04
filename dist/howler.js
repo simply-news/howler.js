@@ -149,13 +149,6 @@
 
       return self;
     },
-
-    changeSrc: function (newSrc) {
-      var self = this;
-      self.unload(true);
-      self._src = newSrc;
-      self.load();
-    }, 
     /**
      * Unload and destroy all currently loaded Howl objects.
      * @return {Howler}
@@ -548,6 +541,12 @@
      * @param  {Object} o Passed in properties for this group.
      * @return {Howl}
      */
+    changeSrc: function (newSrc) {
+      let self = this;
+      self.unload();
+      self._src = newSrc;
+      self.load();
+    },
     init: function(o) {
       var self = this;
 
