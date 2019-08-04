@@ -542,7 +542,7 @@
      * @return {Howl}
      */
     changeSrc: function (newSrc) {
-      let self = this;
+      var self = this;
       self.unload();
       self._src = newSrc;
       self.load();
